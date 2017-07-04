@@ -1,0 +1,935 @@
+/*= THEME STYLESHEET
+ *
+ *  Theme    :   Anchor
+ *  Author   :   Ikram Hakimi Mohd Zaki - @ikramhakimi
+ *  About    :   Single page theme for BootstrapStyler
+ * 
+---------------------------------------------------------------------------------------------- */
+
+@import "mixins.less";
+@import "row.merge.less";
+
+
+/*= TYPOGRAPHY
+---------------------------------------------------------------------------------------------- */
+
+@font_family	: 'Roboto', Arial, sans-serif;
+@font_size		: 14px;
+@link_color		: #08c;
+
+html, body 
+{
+	height: 100%;
+	margin: 0;
+	padding: 0
+}
+
+body
+{
+	background: #fff;
+	color: #666;
+	font-size: @font_size;
+	font-family: @font_family;
+	font-weight: 300;
+}
+h1, h2, h3, h4, h5, h6
+{
+	font-family: 'Roboto', Arial, sans-serif;
+	font-weight: 500;
+	color: #444;
+	margin-top: 0;
+	margin-bottom: 15px;
+	line-height: 1.15;
+
+	small
+	{
+		font-size: 12px;
+		margin: 0 0 0 5px;
+	}
+}
+h1 { font-size: 28px; }
+h2 { font-size: 24px; }
+h3 { font-size: 18px; }
+h4 { font-size: 16px; }
+h5 { font-size: @font_size; }
+h6 { font-size: 11px; }
+strong, b
+{
+	color: #555;
+}
+a
+{
+	color: @link_color;
+	&:hover,
+	&:focus
+	{
+		outline: none;
+	}
+}
+small,
+.small
+{
+	font-size: 13px;
+}
+ul, menu, dir 
+{
+	list-style-type: square;
+}
+form
+{
+	margin: 0;
+
+	fieldset 
+	{
+		border: 1px solid #e5e6e7;
+		.border-radius(2px);
+		padding: 25px;
+	}
+}
+label
+{
+	font-family: inherit;
+	font-weight: inherit;
+}
+.lead
+{
+	font-size: 15px;
+	line-height: 24px;
+}
+.unstyled
+{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.gap-15 { height: 15px; }
+.gap-30 { height: 30px; }
+.gap-50 { height: 30px; }
+.gap-70 { height: 30px; }
+
+
+
+/*= FORM
+---------------------------------------------------------------------------------------------- */
+
+.form-control 
+{
+	.border-radius(2px);
+	.box-shadow(none);
+	font-size: @font_size;
+}
+
+
+
+/*= BUTTONS
+---------------------------------------------------------------------------------------------- */
+
+.btn 
+{
+	.border-radius(2px);
+	border-width: 2px;
+	font-family: @font_family;
+	border-color: transparent;
+
+	&:hover
+	{
+		border-color: transparent;
+	}
+}
+.btn-outline
+{
+	border-color: #fff;
+	border-color: rgba(255,255,255,.4);
+	background: none;
+	color: #fff;
+
+	&:hover,
+	&.active
+	{
+		// background: #fff;
+		border-color: #fff;
+		border-color: rgba(255,255,255,.8);
+		color: #fff;
+		.box-shadow(none);
+	}
+}
+
+.btn-inverse
+{
+	background: #1e1e1e;
+	color: #fff;
+
+	&:hover
+	{
+		background: #2f2f2f;
+		color: #fff;
+	}
+}
+
+
+/*= HEADER
+---------------------------------------------------------------------------------------------- */
+
+.header
+{
+	.navbar
+	{
+		background: #fff;
+	}
+
+	.navbar-nav
+	{
+		>li 
+		{
+			>a
+			{ 
+				font-size: @font_size;
+				color: #555;
+			}
+
+			&.active
+			{
+				>a 
+				{
+				}
+			}
+		}
+	}
+}
+
+
+
+/*= SECTIONS
+---------------------------------------------------------------------------------------------- */
+
+.section
+{
+	padding: 100px 0;
+
+	&.type-1
+	{
+		background: #2a333b;
+		color: #a5b3bf;
+
+		a 
+		{
+			// color: #5d738a;
+		}
+
+		h1,h2,h3,h4,h5,h6,strong,b
+		{
+			color: #fff;
+		}
+
+		h4 
+		{
+			color: #a5b3bf;
+			border-color: #313b44; 
+		}
+
+		hr 
+		{
+			border-color: #313b44;
+		}
+
+		.form-control 
+		{
+			background: #384048;
+			border-color: transparent !important;
+			color: #a5b3bf;
+			-o-transition: background-color .3s linear;
+			-ms-transition: background-color .3s linear;
+			-moz-transition: background-color .3s linear;
+			-webkit-transition: background-color .3s linear;
+			/* ...and now override with proper CSS property */
+			transition: background-color .3s linear;
+
+			&:focus 
+			{
+				background: #fff;
+				.box-shadow(none);
+			}
+		}
+	}
+
+	&.type-2
+	{
+		background: #fff;
+	}
+
+	&.type-3
+	{
+		background: #f0f2f4;
+	}
+
+	&.big 
+	{
+		height: 100%;
+	}
+
+	&.splash 
+	{
+		background: url(../images/samples/wallpaper/wallpaper-2.jpg) fixed no-repeat; 
+		position: relative; 
+		z-index: 1;
+
+		h1 
+		{
+			font-size: 50px; 
+			font-weight: 500; 
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.section-headlines
+{
+	margin-bottom: 60px;
+
+	>h2 
+	{
+		font-size: 32px;
+	}
+
+	>h4 
+	{
+		font-family: @font_family;
+		font-size: 12px;
+		text-transform: uppercase;
+		color: #777;
+		border-bottom: 2px solid #ddd;
+		display: inline-block;
+		padding-bottom: 10px;
+		margin-bottom: 35px;
+		letter-spacing: 2px;
+		word-spacing: 5px;
+	}
+
+	>div 
+	{
+		line-height: 1.8;
+	}
+}
+
+
+
+/*= SPLASH
+---------------------------------------------------------------------------------------------- */
+
+
+.splash-cover
+{
+	background: #363b48;  
+	width: 100%; 
+	height: 100%; 
+	top: 0; 
+	position: absolute;
+	z-index: 2;
+	.opacity(85);
+}
+.splash-block {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+}
+ 
+.splash-block:before {
+	content: '';
+	display: inline-block;
+	height: 100%; 
+	vertical-align: middle;
+	margin-right: -0.25em; /* Adjusts for spacing */
+ }
+ 
+.centered {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	padding: 100px 0;
+ }
+
+
+
+/*= JUMPER
+---------------------------------------------------------------------------------------------- */
+
+.jumper
+{
+	height: 0;
+	position: relative;
+	top: -50px;
+}
+
+
+
+/*= WORK
+---------------------------------------------------------------------------------------------- */
+
+.work-thumb
+{
+	display: block;
+}
+
+.work-content
+{
+	background: #fff;
+	padding: 15px;
+}
+
+
+
+/*= SERVICES
+---------------------------------------------------------------------------------------------- */
+
+@module_padding			: 15px;
+@module_border_color	: #d2d4d8;
+@module_radius			: 3px;
+@module_radius_in		: @module_radius - 1;
+@module_spacing			: 30px;
+
+.gallery-control
+{
+	margin: 0 0 30px;
+}
+#Grid 
+{
+	font-size: 0;
+	line-height: 0;
+	text-align: justify;
+	display: inline-block;
+	width: 100%;
+
+	.mix
+	{
+		opacity: 0;
+		display: none;
+		width: 20%;
+		vertical-align: top;
+		font-size: @font_size;
+
+		>div 
+		{
+
+			.media-thumb 
+			{
+				position: relative;
+				overflow: hidden;
+
+				img 
+				{
+					display: block;
+					max-width: 100%;
+				}
+
+				&:hover 
+				{
+					.media-desc 
+					{
+						.opacity(100);
+					}
+				}
+			}
+
+			.media-desc 
+			{
+				.opacity(0);
+				background: #F4454A;
+				background: rgba(244, 69, 74, .8);
+				color: #fff;
+				color: rgba(255,255,255,.7);
+
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				line-height: 20px;
+
+				-o-transition: opacity .3s linear;
+				-ms-transition: opacity .3s linear;
+				-moz-transition: opacity .3s linear;
+				-webkit-transition: opacity .3s linear;
+				/* ...and now override with proper CSS property */
+				transition: opacity .3s linear;
+
+				>div 
+				{
+					width: 100%;
+					padding: 20px;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+				}
+
+				b 
+				{
+					color: #fff;
+					color: rgba(255,255,255,.9);
+					font-size: 16px;
+				}
+			}
+
+			.media-detail
+			{
+				background: #f9f9f9;
+				border-top: 1px solid #eee;
+				padding: 10px;
+				margin: 0 10px;
+				line-height: 20px;
+
+				display: none;
+			}
+		}
+	}
+}
+@media (max-width: 1020px) 
+{
+	#Grid 
+	{
+		.mix { width: 25%; }
+	}
+}
+@media (min-width: 768px) and (max-width: 979px)
+{
+	#Grid 
+	{
+		.mix { width: 33.333333%; }
+	}
+}
+@media (max-width: 767px) 
+{
+	#Grid 
+	{
+		.mix { width: 100%; }
+	}
+}
+
+
+/*= FEATURES
+---------------------------------------------------------------------------------------------- */
+
+.features
+{
+	.media 
+	{
+		>i 
+		{
+			font-size: 28px;
+			line-height: 55px;
+			margin-right: 25px;	
+			width: 60px;
+			height: 60px;
+			border: 3px solid #eee;
+			.border-radius(50%);
+			text-align: center;
+
+			-webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+			-moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+			-o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+			transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+		}
+
+		+.media
+		{
+			margin-top: 0;
+		}
+	}
+}
+
+
+
+/*= PRICING PLANS
+---------------------------------------------------------------------------------------------- */
+
+.pricing-plans
+{
+	.plan-name
+	{
+		h2 
+		{
+			background: #1e1e1e;
+			.border-radius(3px 3px 0 0);
+			padding: 25px;
+			margin: 0;
+			color: #fff;
+		}
+
+		p 
+		{
+			background: #2f2f2f;
+			color: #ddd;
+			padding: 15px;
+			margin: 0;
+		}
+	}
+
+	.plan-featured
+	{
+		.plan-name 
+		{
+			h2 
+			{
+				background: #47a447;
+			}
+
+			p 
+			{
+				background: #5cb85c;
+				color: #fff;
+			}
+		}
+	}
+
+	.plan-price
+	{
+		background: #f5f5f5;
+		padding: 25px;
+
+		>b 
+		{
+			color: #444;
+			font-size: 60px;
+			font-weight: 400;
+			letter-spacing: -1px;
+		}
+	}
+
+	.plan-details
+	{
+		padding: 0 15px;
+		background: #f5f5f5;
+
+		>div
+		{
+			padding: 15px 0;
+
+			+ div 
+			{
+				border-top: 1px solid #eee;
+			}
+		}
+	}
+
+	.plan-action 
+	{
+		background: #f5f5f5;
+		border-top: 0;
+		.border-radius(0 0 3px 3px);
+		padding: 15px;
+	}
+}
+
+
+/*= SOCIAL LINKS
+---------------------------------------------------------------------------------------------- */
+
+.person 
+{
+	.person-avatar 
+	{
+		margin-right: 20px;
+	}
+}
+
+
+/*= SOCIAL LINKS
+---------------------------------------------------------------------------------------------- */
+
+.social-links
+{
+	font-size: 30px; 
+
+	&.size-big
+	{
+		font-size: 40px;
+	}
+
+	a 
+	{
+		color: #aaa;
+		text-decoration: none !important;
+
+		&:hover
+		{
+			color: #fff;
+		}
+	}
+}
+
+
+
+/*= BRANDS
+---------------------------------------------------------------------------------------------- */
+
+.brands
+{
+	.brand 
+	{
+		border: 1px solid #eee;
+		padding: 30px;
+		text-align: center;
+	}
+}
+
+
+
+
+
+
+
+
+/*= FOOTER
+---------------------------------------------------------------------------------------------- */
+
+.footer
+{
+	background: #242b32;
+	color: #a5b3bf;
+	font-size: 13px;
+	padding: 20px 0;
+
+	* 
+	{
+		line-height: 20px;
+	}
+
+	.link-social 
+	{
+		color: inherit;
+		.opacity(80);
+		margin-left: 15px;
+		text-decoration: none !important;
+		font-size: 18px;	
+
+		&:hover 
+		{
+			.opacity(100);
+		}
+	}
+}
+
+.section-contact
+{
+	.address-row
+	{
+		display: table;
+		width: 100%;
+	}
+
+	.address-sign 
+	{
+		display: table-cell;
+		width: 30px;
+		.opacity(30);
+	}
+
+	.address-info
+	{
+		display: table-cell;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*= BOOTSTRAP OVERWRITE: ACCORDIANS
+---------------------------------------------------------------------------------------------- */
+
+.panel-group
+{
+	.panel
+	{
+		.border-radius(0);
+		border: 0;
+		.box-shadow(none);
+
+		+.panel 
+		{
+			border-top: 1px solid #eee;
+			margin-top: 0;
+			padding-top: 10px
+		}
+	}
+
+	.panel-heading 
+	{
+		padding: 0 0 10px;
+	}
+
+	.panel-body 
+	{
+		padding: 5px 0 15px;
+		border-top: 0 !important;
+	}
+}
+
+.panel-title 
+{
+	font-size: 18px; 
+
+	a 
+	{
+		display: block;
+		overflow: hidden;
+		position: relative;
+		text-decoration: none !important;
+
+		i 
+		{
+			color: #bbb;
+			font-size: 14px;
+			height: 23px;
+			line-height: 23px;
+			float: left;
+			margin-right: 10px;
+			width: 20px;
+			text-align: center;
+		}
+
+		.icon-minus 
+		{
+			display: none;
+		}
+
+		&.collapsed 
+		{
+			.icon-minus 
+			{
+				display: block;
+			}
+
+			.icon-plus 
+			{
+				display: none;
+			}
+		}
+	}
+}
+
+
+
+
+ /*= TESTIMONIAL
+---------------------------------------------------------------------------------------------- */
+
+#carousel-testimonial 
+{
+	margin-top: 50px;
+}
+
+.testimonial 
+{
+	background: #f9f9f9;
+	padding: 40px;
+}
+
+.testimonial-avatar 
+{
+	padding-left: 30px;
+
+	 img 
+	 {
+	 	width: 100px;
+	 	height: auto;
+	 }
+}
+.testimonial-content
+{
+	.lead 
+	{
+		border-left: 1px solid #ddd;
+		padding-left: 30px;
+		font-size: 18px;
+		margin-top: 10px;
+	}
+}
+
+.carousel-controller
+{
+	position: absolute;
+	right: 15px;
+	top: 15px;
+}
+
+.dis-table 
+{
+	display: table;
+	width: 100%;
+}
+
+.dis-tablecell 
+{
+	display: table-cell;
+	vertical-align: top;	
+}
+
+
+@import "theme-responsive-767";
+@import "theme-responsive-768-979";
+@import "theme-responsive-979";
