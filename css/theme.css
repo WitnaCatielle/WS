@@ -3,7 +3,7 @@
  *  Theme    :   Anchor
  *  Author   :   Ikram Hakimi Mohd Zaki - @ikramhakimi
  *  About    :   Single page theme for BootstrapStyler
- * 
+ *
 ---------------------------------------------------------------------------------------------- */
 /*= ZERO GUTTER STYLING
 ---------------------------------------------------------------------------------------------- */
@@ -639,10 +639,10 @@ label {
   margin: 0;
 }
 .pricing-plans .plan-featured .plan-name h2 {
-  background: #47a447;
+  background: #428bca;
 }
 .pricing-plans .plan-featured .plan-name p {
-  background: #5cb85c;
+  background: #2eb2ff;
   color: #fff;
 }
 .pricing-plans .plan-price {
