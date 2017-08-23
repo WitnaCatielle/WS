@@ -436,7 +436,7 @@ label {
   height: 100%;
 }
 .section.splash {
-  background: url(../images/samples/wallpaper/wallpaper-3.jpg)center center fixed no-repeat;
+  background: url(../images/samples/wallpaper/parallax2.jpg)center center fixed no-repeat;
   position: relative;
   z-index: 1;
 }
@@ -469,14 +469,14 @@ label {
 /*= SPLASH
 ---------------------------------------------------------------------------------------------- */
 .splash-cover {
-  /* background: #363b48; */
+  background: #363b48;
   width: 100%;
   height: 100%;
   top: 0;
   position: absolute;
   z-index: 2;
-  opacity: 0.85;
-  filter: alpha(opacity=85);
+  opacity: 0.50;
+  filter: alpha(opacity=50);
 }
 .splash-block {
   position: absolute;
