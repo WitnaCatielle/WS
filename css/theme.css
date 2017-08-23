@@ -436,7 +436,11 @@ label {
   height: 100%;
 }
 .section.splash {
+<<<<<<< HEAD
   background: url(../images/samples/wallpaper/parallax2.jpg)center center fixed no-repeat;
+=======
+  background: url(../images/samples/wallpaper/wallpaper-3.jpg)center fixed no-repeat;
+>>>>>>> master
   position: relative;
   z-index: 1;
 }
