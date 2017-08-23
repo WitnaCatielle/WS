@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 /*= THEME STYLESHEET
  *
  *  Theme    :   Anchor
@@ -8,9 +7,7 @@
 ---------------------------------------------------------------------------------------------- */
 /*= ZERO GUTTER STYLING
 ---------------------------------------------------------------------------------------------- */
-=======
 
->>>>>>> Stashed changes
 .row-merge {
   width: 100%;
   *zoom: 1;
@@ -436,8 +433,8 @@ label {
   height: 100%;
 }
 .section.splash {
-  background: url(../images/samples/wallpaper/parallax2.jpg)center center fixed no-repeat;
-  position: center;
+  background: url(../images/samples/wallpaper/parallax2.jpg?v=2)center center fixed no-repeat;
+  position: relative;
   z-index: 1;
 }
 .section.splash h1 {
